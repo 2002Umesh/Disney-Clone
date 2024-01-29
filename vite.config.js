@@ -1,16 +1,20 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { VitePluginRedirect } from "vite-plugin-redirect";
-
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { createRouter } from "vue-router";
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    VitePluginRedirect({
-      // Add your redirect rules here
-      rules: [
-        { from: "/old-page", to: "https://sasta-disney-plus.vercel.app" },
-        { from: "/legacy", to: "https://sasta-disney-plus.vercel.app" },
-      ],
-    }),
+  plugins: [react(),
+    createVuePlugin(),
+    {
+      configureServer: [async ({ app }) => {
+        const { default: routes } = await import('./routes') // Import your routes configuration
+        const router = createRouter({
+          history: createWebHistory(),
+          routes,
+        })
+        app.use(router)
+      }],
+    },
   ],
-});
+
+})
