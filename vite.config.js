@@ -8,14 +8,8 @@ export default defineConfig({
     VitePluginRedirect({
       // Add your redirect rules here
       rules: [
-        {
-          from: "https://sasta-disney-plus.vercel.app",
-          to: "https://sasta-disney-plus.vercel.app",
-        },
-        {
-          from: "https://sasta-disney-plus.vercel.app",
-          to: "https://sasta-disney-plus.vercel.app",
-        },
+        { from: "/old-page", to: "https://sasta-disney-plus.vercel.app" },
+        { from: "/legacy", to: "https://sasta-disney-plus.vercel.app" },
       ],
     }),
   ],
