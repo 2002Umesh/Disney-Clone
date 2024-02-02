@@ -42,11 +42,11 @@ function Category() {
         <Header/>
         </div>
         <div className=" pl-2 md:pl-24 overflow-hidden">
-          <div className='flex gap-2 md:gap-5 p-2 pt-7 px-5 md:px-10 md:justify-center'>
-            {productionHouseList.map((item, index) => (
+          <div className='flex gap-2 md:gap-5 p-2 pt-7 px-5 md:px-10 md:justify-center '>
+            {productionHouseList.map((item, index) =>(
               <div key={item.id} className='border-[2px] border-gray-600 rounded-lg hover:scale-110 cursor-pointer transition-all duration-300 ease-in-out relative shadow-xl shadow-gray-800'>
                 <video ref={videoRefs[index]} src={item.video} autoPlay loop playsInline muted className='absolute top-0 rounded-md z-0 opacity-0 hover:opacity-100' />
-                <img src={item.image} alt='image' className='w-full z-[1]' />
+                <img src={item.image} alt='image' className=' md:w-full z-[1]' />
               </div>
             ))}
           </div>
