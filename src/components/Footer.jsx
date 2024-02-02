@@ -8,7 +8,7 @@ function Footer() {
         <div className="">
           <h3 className="text-sm md:text-lg">Company</h3>
           <div className="flex gap-2 md:block">
-            <div className="pt-4">
+            <div className="md:pt-4">
               <a
                 href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar"
                 className="cursor-pointer text-xs md:text-sm"
@@ -16,7 +16,7 @@ function Footer() {
                 About Us
               </a>
             </div>
-            <div className="pt-4">
+            <div className="md:pt-4">
               <a
                 href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar"
                 className="cursor-pointer text-xs md:text-sm"
@@ -28,7 +28,7 @@ function Footer() {
         </div>
         <div>
           <h3 className="text-sm md:text-lg">View Website in</h3>
-          <div className="pt-4">
+          <div className="md:pt-4">
             <select name="lang" className="text-sm">
               <option value="English">English</option>
               <option value="Hindi">Hindi</option>
@@ -39,12 +39,12 @@ function Footer() {
         <div>
           <h3 className="text-sm md:text-lg">Need Help?</h3>
           <div className="flex gap-2 md:block text-xs md:text-sm">
-            <div className="pt-4 cursor-pointer text-xs md:text-sm">
+            <div className="md:pt-4 cursor-pointer text-xs md:text-sm">
               <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
                 Visit Help Center
               </a>
             </div>
-            <div className="pt-4 cursor-pointer text-xs md:text-sm">
+            <div className="md:pt-4 cursor-pointer text-xs md:text-sm">
               <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
                 Share feedback
               </a>
@@ -53,7 +53,7 @@ function Footer() {
         </div>
         <div>
           <h3 className="text-sm md:text-lg">Connect With Us</h3>
-          <div className="flex justify-content pt-4 cursor-pointer">
+          <div className="flex justify-content pt-1 md:pt-4 cursor-pointer">
             <a
               href="https://www.facebook.com/DisneyPlusHotstar"
               className="pl-2"
