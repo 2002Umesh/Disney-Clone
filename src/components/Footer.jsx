@@ -53,7 +53,7 @@ function Footer() {
         </div>
         <div>
           <h3 className="text-sm md:text-lg">Connect With Us</h3>
-          <div className="flex justify-content pt-1 md:pt-4 cursor-pointer">
+          <div className="flex justify-content pt-1 md:pt-4 cursor-pointer pb-0 md:pb-1">
             <a
               href="https://www.facebook.com/DisneyPlusHotstar"
               className="pl-2"
