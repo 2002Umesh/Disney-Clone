@@ -15,8 +15,10 @@ function Login() {
 
   return (
     <>
-      <div className="flex">
-        <div className="hidden md:block"><Header /></div>
+      <div className="flex ">
+        <div className=" hidden md:block">
+          <Header />
+        </div>
         <div className="w-full pl-2">
           <div className="flex justify-end pr-3 pt-5 pb-1">
             <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
@@ -43,13 +45,16 @@ function Login() {
                 Log Out
               </button>
             ) : (
-              <button className="w-[150px] md:w-[250px]" onClick={() => loginWithRedirect()}>
+              <button
+                className="w-[150px] md:w-[250px]"
+                onClick={() => loginWithRedirect()}
+              >
                 Log In
               </button>
             )}
           </div>
-          <MyWatchlist/>
-          <div className="pt-[100px] md:pt-[200px]">
+          <MyWatchlist />
+          <div className="pt-[100px] md:pt-[190px]">
             <Footer />
           </div>
         </div>
