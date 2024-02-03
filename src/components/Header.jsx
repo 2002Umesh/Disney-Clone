@@ -19,7 +19,7 @@ function Header() {
           alt="logo"
         />
         <div
-          className="flex space-x-4 md:space-x-0 md:block  md:pt-5 pl-5 md:pl-0"
+          className="flex justify-evenly md:block w-screen md:w-full "
           onMouseEnter={() => {
             setShow(true);
           }}
@@ -56,7 +56,7 @@ function Header() {
       {show && (
         <Fade>
           <div className="hidden md:block absolute  bg-opacity-40 font-bold  z-20 w-28 h-full text-xl text-slate-300 pl-2">
-            <h4 className="cursor-pointer mt-[75px] ">My Space</h4>
+            <h4 className="cursor-pointer mt-[55px] ">My Space</h4>
             <h4 className="cursor-pointer mt-[34px]">Home</h4>
             <h4 className="cursor-pointer mt-[35px]">Search</h4>
             <h4 className="cursor-pointer mt-[35px]">Movies</h4>
