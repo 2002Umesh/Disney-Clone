@@ -15,11 +15,11 @@ function Login() {
 
   return (
     <>
-      <div className="flex ">
+      <div className="flex">
         <div className=" hidden md:block">
           <Header />
         </div>
-        <div className="w-full pl-2">
+        <div className="w-full pl-2 h-screen md:h-full">
           <div className="flex justify-end pr-3 pt-5 pb-1">
             <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
               <button className="">Help & Support</button>
