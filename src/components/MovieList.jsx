@@ -41,7 +41,7 @@ function MovieList({genereId,index_}) {
     <div className="relative">
 
          <IoChevronBackOutline onClick={()=>slideLeft(elementRef.current)} 
-         className={`text-[50px] text-white
+         className={`hidden md:block text-[50px] text-white
            p-2 z-10 cursor-pointer 
              absolute ${index_%3==0? 'mt-[30px] md:mt-[80px]':'mt-[60px] md:mt-[150px]'} `}/>
 
@@ -54,7 +54,7 @@ function MovieList({genereId,index_}) {
               </>
         ))}
     </div>
-    <IoChevronForwardOutline onClick={()=>slideRight(elementRef.current)} className={`text-[50px] text-white 
+    <IoChevronForwardOutline onClick={()=>slideRight(elementRef.current)} className={`hidden md:block text-[50px] text-white 
            p-2 cursor-pointer z-10 top-0
             absolute right-0 ${index_%3==0? 'mt-[30px] md:mt-[80px]':'mt-[60px] md:mt-[150px]'}`}/> 
     </div>

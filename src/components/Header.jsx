@@ -28,18 +28,18 @@ function Header() {
           }}
         >
           <NavLink to="/Login">
-            {" "}
+           
             <FaUserSecret className="cursor-pointer  md:mb-5 md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/">
-            {" "}
+           
             <HiHomeModern className="cursor-pointer md:mb-5 md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/Search">
             <LiaSearchengin className="cursor-pointer md:mb-5 md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/Movies">
-            {" "}
+            
             <MdMovieFilter className="cursor-pointer md:mb-5  md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/Tv">
