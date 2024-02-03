@@ -19,7 +19,7 @@ function Header() {
           alt="logo"
         />
         <div
-          className="flex justify-evenly md:block w-screen md:w-full "
+          className="flex justify-evenly md:block w-screen md:w-full overflow-x-hidden"
           onMouseEnter={() => {
             setShow(true);
           }}
