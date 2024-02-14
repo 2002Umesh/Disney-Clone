@@ -9,8 +9,8 @@ import store from "./store/index.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider
-      domain="dev-62pziw0lvu7peaxl.us.auth0.com"
-      clientId="jd5SKmEClywGNCgmafUO4062WDiJHQSc"
+      domain="dev-vuej525bcqstxdby.us.auth0.com"
+      clientId="ldYWbagGd6CZQ3F8vS7MryF0wOMSC5Nb"
       authorizationParams={{
         redirect_uri: window.location.origin,
       }}
