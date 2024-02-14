@@ -9,6 +9,7 @@ import Sports from "./components/Sports";
 import Category from "./components/Category";
 import MovieDetail from "./components/MovieDetail";
 
+
 function App() {
   return (
     <>
