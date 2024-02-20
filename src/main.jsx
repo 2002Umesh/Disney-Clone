@@ -6,6 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
 import { Provider } from "react-redux";
 import store from "./store/index.jsx";
+import { AuthProvider } from "./mystore/auth.jsx";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Auth0Provider
@@ -15,11 +17,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         redirect_uri: window.location.origin,
       }}
     >
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
+      <GoogleOAuthProvider clientId="268812847810-kld0gv24sbdvjkljmqa65fchknv9hihu.apps.googleusercontent.com">
+        <BrowserRouter>
+          <Provider store={store}>
+            <AuthProvider>
+              <App />
+            </AuthProvider>
+          </Provider>
+        </BrowserRouter>
+      </GoogleOAuthProvider>
     </Auth0Provider>
   </React.StrictMode>
 );

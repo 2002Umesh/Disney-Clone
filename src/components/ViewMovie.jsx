@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import YouTube from "react-youtube";
-import { useAuth0 } from "@auth0/auth0-react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+// import { useAuth0 } from "@auth0/auth0-react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useAuth } from "../mystore/auth";
 // Set the app element
-Modal.setAppElement('#root');
+Modal.setAppElement("#root");
 
 const customStyles = {
   content: {
@@ -16,11 +16,13 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
+    
   },
 };
 
 function ViewMovie({ movieId }) {
-  const { isAuthenticated } = useAuth0();
+  const { isLoggedIn } = useAuth();
+  // const { isAuthenticated } = useAuth0();
   const [videos, setVideos] = useState(["no videos"]);
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -51,7 +53,14 @@ function ViewMovie({ movieId }) {
   return (
     <>
       <div>
-        <button className="w-[135px]" onClick={() => isAuthenticated ? openModal() : toast.warning("Please login")}>Watch Now</button>
+        <button
+          className="w-[135px]"
+          onClick={() =>
+            isLoggedIn ? openModal() : toast.warning("Please login")
+          }
+        >
+          Watch Now
+        </button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}

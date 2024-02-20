@@ -9,7 +9,7 @@ import { MdCategory } from "react-icons/md";
 import { Fade } from "react-awesome-reveal";
 import { NavLink } from "react-router-dom";
 function Header() {
-    const [show,setShow]=useState(false)
+  const [show, setShow] = useState(false);
   return (
     <div className=" grid md:grid-cols-2  h-full md:h-screen w-20 md:w-30 ">
       <div className="">
@@ -28,18 +28,15 @@ function Header() {
           }}
         >
           <NavLink to="/Login">
-           
             <FaUserSecret className="cursor-pointer  md:mb-10 md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/">
-           
             <HiHomeModern className="cursor-pointer md:mb-7 md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/Search">
             <LiaSearchengin className="cursor-pointer md:mb-7 md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/Movies">
-            
             <MdMovieFilter className="cursor-pointer md:mb-7  md:pb-6 hover:scale-110 transition-all duration-150 ease-in-out size-6 md:size-11" />
           </NavLink>
           <NavLink to="/Tv">
@@ -55,14 +52,36 @@ function Header() {
       </div>
       {show && (
         <Fade>
-          <div className="hidden md:block absolute  bg-opacity-60 font-bold  z-20 w-28 h-full text-xl text-slate-300 pl-2 bg-stone-950">
-            <h4 className="cursor-pointer mt-[69px] ">My Space</h4>
-            <h4 className="cursor-pointer mt-[53px]">Home</h4>
-            <h4 className="cursor-pointer mt-[43px]">Search</h4>
-            <h4 className="cursor-pointer mt-[44px]">Movies</h4>
-            <h4 className="cursor-pointer mt-[44px]">TV</h4>
-            <h4 className="cursor-pointer mt-[45px]">Sports</h4>
-            <h4 className="cursor-pointer mt-[45px]">Category</h4>
+          <div
+            className="hidden md:block absolute  bg-opacity-60   z-20 w-28 h-full text-xl text-slate-300 pl-2 bg-stone-950"
+            onMouseEnter={() => {
+              setShow(true);
+            }}
+            onMouseLeave={() => {
+              setShow(false);
+            }}
+          >
+            <NavLink to="/Login">
+              <h4 className="cursor-pointer mt-[69px] font-bold">My Space</h4>
+            </NavLink>
+            <NavLink to="/">
+              <h4 className="cursor-pointer mt-[53px] font-bold">Home</h4>
+            </NavLink>
+            <NavLink to="/Search">
+              <h4 className="cursor-pointer mt-[43px] font-bold">Search</h4>
+            </NavLink>
+            <NavLink to="/Movies">
+              <h4 className="cursor-pointer mt-[44px] font-bold">Movies</h4>
+            </NavLink>
+            <NavLink to="/Tv">
+              <h4 className="cursor-pointer mt-[44px] font-bold">TV</h4>
+            </NavLink>
+            <NavLink to="/Sports">
+              <h4 className="cursor-pointer mt-[45px] font-bold">Sports</h4>
+            </NavLink>
+            <NavLink to="/Category">
+              <h4 className="cursor-pointer mt-[45px] font-bold">Category</h4>
+            </NavLink>
           </div>
         </Fade>
       )}

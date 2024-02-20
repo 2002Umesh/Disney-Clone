@@ -8,6 +8,9 @@ import Tv from "./components/Tv";
 import Sports from "./components/Sports";
 import Category from "./components/Category";
 import MovieDetail from "./components/MovieDetail";
+import LoginForm from "./components/LoginForm";
+import {Contact} from "./components/Contact";
+
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Mains />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Loginform" element={<LoginForm/>} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="/Search" element={<Search />} />
         <Route path="/Movies" element={<Movies />} />
         <Route path="/Tv" element={<Tv />} />

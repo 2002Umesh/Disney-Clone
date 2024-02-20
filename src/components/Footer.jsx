@@ -1,7 +1,13 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+import { useAuth } from "../mystore/auth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Footer() {
+  const {isLoggedIn} = useAuth();
   return (
     <>
       <div className="grid md:grid-cols-4">
@@ -29,7 +35,7 @@ function Footer() {
         <div>
           <h3 className="text-sm md:text-lg">View Website in</h3>
           <div className="md:pt-4">
-            <select name="lang" className="text-sm">
+            <select name="lang" className="text-sm bg-black">
               <option value="English">English</option>
               <option value="Hindi">Hindi</option>
               <option value="Odia">Odia</option>
@@ -40,14 +46,24 @@ function Footer() {
           <h3 className="text-sm md:text-lg">Need Help?</h3>
           <div className="flex gap-2 md:block text-xs md:text-sm">
             <div className="md:pt-4 cursor-pointer text-xs md:text-sm">
-              <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
+              {isLoggedIn ? (
+                <NavLink to="/contact">Visit Help Center</NavLink>
+              ) : (
+                <div onClick={()=>toast.warning("Please login")}>Visit Help </div>
+              )}
+              {/* <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
                 Visit Help Center
-              </a>
+              </a> */}
             </div>
             <div className="md:pt-4 cursor-pointer text-xs md:text-sm">
-              <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
+              {isLoggedIn ? (
+                <NavLink to="/contact">Share feedback</NavLink>
+              ) : (
+                <div onClick={()=>toast.warning("Please login")}> Share feedback</div>
+              )}
+              {/* <a href="https://en.wikipedia.org/wiki/Disney%2B_Hotstar">
                 Share feedback
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -75,6 +91,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 }
